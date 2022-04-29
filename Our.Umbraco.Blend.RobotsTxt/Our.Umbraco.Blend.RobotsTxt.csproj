@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <ContentTargetFolders>.</ContentTargetFolders>
+        <PackageId>Our.Umbraco.Blend.RobotsTxt</PackageId>
+        <Title>Our.Umbraco.Blend.RobotsTxt</Title>
+        <Description>Dynamic route for /robots.txt</Description>
+        <Product>Robots.txt for Umbraco 9</Product>
+        <PackageTags>umbraco plugin package robots blend</PackageTags>
+        <RootNamespace>$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+        <Version>9.0.0</Version>
+        <Authors>Chase Burandt</Authors>
+        <Company>Blend Interactive</Company>
+        <Copyright>Copyright (c) Blend Interactive</Copyright>
+        <RepositoryType>git</RepositoryType>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Umbraco.Cms.Web.Website" Version="9.4.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="build\**\*.*">
+            <Pack>True</Pack>
+            <PackagePath>buildTransitive</PackagePath>
+        </None>
+    </ItemGroup>
+</Project>
