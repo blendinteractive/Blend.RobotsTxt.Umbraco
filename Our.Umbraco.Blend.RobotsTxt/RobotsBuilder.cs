@@ -78,7 +78,7 @@ namespace Our.Umbraco.Blend.RobotsTxt
                 // Load Robots.txt by environment.
                 switch (_webHostEnvironment.EnvironmentName)
                 {
-                    case "Prod":
+                    case "Production":
                         stringBuilder.AppendLine("User-agent: *");
                         stringBuilder.AppendLine("Allow: /");
                         stringBuilder.AppendLine($"Disallow: {_globalSettings.UmbracoPath.Replace("~", "")}");
@@ -92,7 +92,7 @@ namespace Our.Umbraco.Blend.RobotsTxt
             }
             else
             {
-                // Last Resort and display prod robots.txt.
+                // Last Resort and display production robots.txt.
                 stringBuilder.AppendLine("User-agent: *");
                 stringBuilder.AppendLine("Allow: /");
                 stringBuilder.AppendLine($"Disallow: {_globalSettings.UmbracoPath.Replace("~", "")}");
