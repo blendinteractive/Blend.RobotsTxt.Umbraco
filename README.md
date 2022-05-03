@@ -30,7 +30,7 @@ This will use the route `/robots.txt` declared in the controller.
 
 ## Default
 ---
-If there is not any configuration in the appSettings.json file and no envrionment is found the default robots.txt will be:
+If there is not any configuration in the appSettings.json file and no environment is found the default robots.txt will be:
 ```
 User-agent: *
 Allow: /
@@ -47,7 +47,7 @@ The `/umbraco` is global path that is set in appSettings. If this is set to a di
 
 ## Configuration
 ---
-In the root of your `appSettings.json` you can configure custom settings. You can also use `appSettings.[Environment].json` to have specific settings for every envrinment.
+In the root of your `appSettings.json` you can configure custom settings. You can also use `appSettings.[Environment].json` to have specific settings for every environment.
 ```
 "Robots": [
     {
