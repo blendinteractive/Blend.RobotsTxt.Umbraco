@@ -30,7 +30,7 @@ This will use the route `/robots.txt` declared in the controller.
 
 ## Default
 ---
-If there is not any configuration in the appSettings.json file and no environment is found the default robots.txt will be:
+If there are not any configurations in the appSettings.json file and no environment is found the default robots.txt will be:
 ```
 User-agent: *
 Allow: /
