@@ -21,7 +21,7 @@ jobs:
       - name: Package Release
         run:
           dotnet pack -c Release --no-build -o out "./Our.Umbraco.Blend.RobotsTxt/Our.Umbraco.Blend.RobotsTxt.csproj"
-      - name: Publish Nuget to GitHub registry
-        run: ls .\out\*.nupkg | foreach { dotnet nuget push $_ -s https://nuget.pkg.github.com/blendinteractive/index.json -k $env:GITHUB_TOKEN }
+      - name: Publish Nuget to Nuget.org
+        run: ls .\out\*.nupkg | foreach { dotnet nuget push $_ -s https://api.nuget.org/v3/index.json -k $env:NUGET_TOKEN }
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+          NUGET_TOKEN: ${{ secrets.NUGET_BLEND_ROBOTSTXT_TOKEN }} 
