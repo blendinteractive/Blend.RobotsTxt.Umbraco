@@ -6,7 +6,7 @@
         <Description>Dynamic route for /robots.txt</Description>
         <Product>Robots.txt for Umbraco 9</Product>
         <RootNamespace>$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
-        <Version>9.0.0</Version>
+        <Version>9.0.1</Version>
         <Authors>Chase Burandt</Authors>
         <Company>Blend Interactive</Company>
         <Copyright>Copyright (c) 2022 Blend Interactive</Copyright>
