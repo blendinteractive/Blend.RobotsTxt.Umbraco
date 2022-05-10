@@ -2,21 +2,26 @@
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
         <ContentTargetFolders>.</ContentTargetFolders>
-        <PackageId>Our.Umbraco.Blend.RobotsTxt</PackageId>
         <Title>Our.Umbraco.Blend.RobotsTxt</Title>
         <Description>Dynamic route for /robots.txt</Description>
         <Product>Robots.txt for Umbraco 9</Product>
-        <PackageTags>umbraco plugin package robots blend</PackageTags>
         <RootNamespace>$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
         <Version>9.0.0</Version>
         <Authors>Chase Burandt</Authors>
         <Company>Blend Interactive</Company>
-        <Copyright>Copyright (c) Blend Interactive</Copyright>
+        <Copyright>Copyright (c) 2022 Blend Interactive</Copyright>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <PackageId>Our.Umbraco.Blend.RobotsTxt</PackageId>
+        <PackageTags>umbraco plugin package robots blend</PackageTags>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>https://github.com/blendinteractive/Blend.RobotsTxt.Umbraco</RepositoryUrl>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Umbraco.Cms.Web.Website" Version="9.4.3" />
+        <PackageReference Include="Umbraco.Cms.Web.Website" Version="9.0.0" />
     </ItemGroup>
 
     <ItemGroup>
