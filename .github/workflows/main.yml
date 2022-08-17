@@ -2,26 +2,62 @@ name: Update NuGet
 
 on:
   push:
-    tags:
-      - "v*.*.*"
+    branches:
+      - "main"
 
 jobs:
   build:
+    env:
+      BUILD_CONFIG: 'Release'
+      OUT_FOLDER: './out'
+      NUGET_TOKEN: ${{ secrets.NUGET_BLEND_ROBOTSTXT_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
     runs-on: windows-latest
+    strategy:
+      matrix: 
+        dotnet-versions: ['6.0']
 
-    name: Update NuGet 
+    name: Update_NuGet 
     steps:
-      - uses: actions/checkout@main
-      - uses: actions/setup-dotnet@v1
+      - name: Checkout
+        uses: actions/checkout@v2
         with:
-          dotnet-version: '5.0.x'
-      - name: Build Package
-        run:
-          dotnet build -c Release "./Our.Umbraco.Blend.RobotsTxt/Our.Umbraco.Blend.RobotsTxt.csproj"
-      - name: Package Release
-        run:
-          dotnet pack -c Release --no-build -o out "./Our.Umbraco.Blend.RobotsTxt/Our.Umbraco.Blend.RobotsTxt.csproj"
+          fetch-depth: 0
+
+      - name: Setup .NET Core SDK ${{matrix.dotnet-versions}}
+        uses: actions/setup-dotnet@v1.9.0
+        with:
+          dotnet-version: ${{matrix.dotnet-versions}}
+
+      - name: Setup NuGet.exe
+        uses: nuget/setup-nuget@v1        
+        with:
+          nuget-version: latest
+
+      - name: Install gitversion
+        uses: gittools/actions/gitversion/setup@v0.9.7
+        with:
+          versionSpec: '5.x'
+      
+      - name: Use GitVersion
+        id: gitversion # step id used as reference for output values
+        uses: gittools/actions/gitversion/execute@v0.9.11
+      
+      - name: Install dependencies
+        run: dotnet restore
+
+      - name: Build Blend.Robots
+        run: dotnet pack .\Our.Umbraco.Blend.RobotsTxt\Our.Umbraco.Blend.RobotsTxt.csproj --no-restore -c ${{ env.BUILD_CONFIG }} -o ${{ env.OUT_FOLDER }}  /p:ContinuousIntegrationBuild=true,version=${{ env.GitVersion_NuGetVersionV2 }}
+
       - name: Publish Nuget to Nuget.org
-        run: ls .\out\*.nupkg | foreach { dotnet nuget push $_ -s https://api.nuget.org/v3/index.json -k $env:NUGET_TOKEN }
-        env:
-          NUGET_TOKEN: ${{ secrets.NUGET_BLEND_ROBOTSTXT_TOKEN }} 
+        run: nuget push **\*.nupkg -Source 'https://api.nuget.org/v3/index.json' -ApiKey $env:NUGET_TOKEN
+
+      - name: Release snapshot
+        id: release-snapshot
+        uses: actions/create-release@latest
+        with:
+          tag_name: ${{ env.GitVersion_NuGetVersionV2 }}
+          release_name: ${{ env.GitVersion_NuGetVersionV2 }}
+          draft: false
+          prerelease: false
