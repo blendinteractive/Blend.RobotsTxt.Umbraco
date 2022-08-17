@@ -98,7 +98,6 @@ namespace Our.Umbraco.Blend.RobotsTxt
                 stringBuilder.AppendLine($"Disallow: {_globalSettings.UmbracoPath.Replace("~", "")}");
             }
             var robotsTxt = stringBuilder.ToString();
-
             return robotsTxt;
         }
     }
