@@ -1,5 +1,5 @@
 <Project>
   <ItemGroup>
-    <UmbracoJsonSchemaFiles Include="$(MSBuildThisFileDirectory)..\appsettings-schema.robotstxt.json" Weight="-80" />
+    <UmbracoJsonSchemaFiles Include="$(MSBuildThisFileDirectory)..\appsettings-schema.Blend.RobotsTxt.json" Weight="-80" />
   </ItemGroup>
 </Project>

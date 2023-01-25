@@ -27,6 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="appsettings-schema.Blend.RobotsTxt.json" PackagePath="" />
     <None Include="build\**\*.*">
       <Pack>True</Pack>
       <PackagePath>buildTransitive</PackagePath>

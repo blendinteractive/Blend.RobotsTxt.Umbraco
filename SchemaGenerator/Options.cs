@@ -6,7 +6,7 @@ namespace SchemaGenerator
     {
         [Option('o', "outputFile", Required = false,
             HelpText = "",
-            Default = "..\\Blend.RobotsTxt\\appsettings-schema.robotstxt.json")]
+            Default = "..\\Blend.RobotsTxt\\appsettings-schema.Blend.RobotsTxt.json")]
         public string OutputFile { get; set; }
     }
 }
