@@ -2,7 +2,7 @@
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <ContentTargetFolders>.</ContentTargetFolders>
-    <Title>Our.Umbraco.Blend.RobotsTxt</Title>
+    <Title>Blend RobotsTxt</Title>
     <Description>Dynamic route for /robots.txt</Description>
     <Product>Robots.txt for Umbraco 11</Product>
     <RootNamespace>$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
@@ -14,7 +14,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <PackageId>Our.Umbraco.Blend.RobotsTxt</PackageId>
+    <PackageId>Blend.RobotsTxt</PackageId>
     <PackageTags>umbraco plugin package robots blend umbraco-marketplace</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryType>git</RepositoryType>
