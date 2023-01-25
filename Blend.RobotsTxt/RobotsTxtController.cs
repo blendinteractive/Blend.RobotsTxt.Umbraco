@@ -7,13 +7,13 @@ using Umbraco.Cms.Core.Web;
 using Umbraco.Cms.Infrastructure.Persistence;
 using Umbraco.Cms.Web.Common.Controllers;
 
-namespace Our.Umbraco.Blend.RobotsTxt
+namespace Blend.RobotsTxt
 {
-    public class RobotsController : PluginController
+    public class RobotsTxtController : PluginController
     {
         private readonly IRobotsBuilder _robotsBuilder;
 
-        public RobotsController(IUmbracoContextAccessor umbracoContextAccessor, IUmbracoDatabaseFactory databaseFactory, ServiceContext services, AppCaches appCaches, IProfilingLogger profilingLogger, IRobotsBuilder robotsBuilder)
+        public RobotsTxtController(IUmbracoContextAccessor umbracoContextAccessor, IUmbracoDatabaseFactory databaseFactory, ServiceContext services, AppCaches appCaches, IProfilingLogger profilingLogger, IRobotsBuilder robotsBuilder)
             : base(umbracoContextAccessor, databaseFactory, services, appCaches, profilingLogger)
         {
             _robotsBuilder = robotsBuilder;

@@ -27,7 +27,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="appsettings-schema.robotstxt.json" PackagePath="" />
     <None Include="build\**\*.*">
       <Pack>True</Pack>
       <PackagePath>buildTransitive</PackagePath>

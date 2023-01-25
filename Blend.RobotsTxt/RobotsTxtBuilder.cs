@@ -6,20 +6,20 @@ using System.Text;
 using Umbraco.Cms.Core.Configuration.Models;
 using Umbraco.Extensions;
 
-namespace Our.Umbraco.Blend.RobotsTxt
+namespace Blend.RobotsTxt
 {
     public interface IRobotsBuilder
     {
         string BuildRobots();
     }
 
-    public class RobotsBuilder : IRobotsBuilder
+    public class RobotsTxtBuilder : IRobotsBuilder
     {
-        private readonly List<RobotOptions> _config;
+        private readonly List<RobotsTxtOption> _config;
         private readonly GlobalSettings _globalSettings;
         private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public RobotsBuilder(IOptions<List<RobotOptions>> config, IOptions<GlobalSettings> globalSettings, IWebHostEnvironment webHostEnvironment)
+        public RobotsTxtBuilder(IOptions<List<RobotsTxtOption>> config, IOptions<GlobalSettings> globalSettings, IWebHostEnvironment webHostEnvironment)
         {
             _config = config.Value;
             _globalSettings = globalSettings.Value;
@@ -29,6 +29,7 @@ namespace Our.Umbraco.Blend.RobotsTxt
         public string BuildRobots()
         {
             var stringBuilder = new StringBuilder();
+
 
             if (_config.Any())
             {
