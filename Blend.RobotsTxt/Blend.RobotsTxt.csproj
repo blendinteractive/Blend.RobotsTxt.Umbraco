@@ -14,7 +14,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <PackageId>Blend.RobotsTxt</PackageId>
+    <PackageId>BlendInteractive.RobotsTxt</PackageId>
     <PackageTags>umbraco plugin package robots blend umbraco-marketplace</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryType>git</RepositoryType>
