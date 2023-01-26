@@ -1,0 +1,29 @@
+{
+  "$schema": "https://marketplace.umbraco.com/umbraco-marketplace-schema.json",
+  "AuthorDetails": {
+    "Name": "Chase Burandt",
+    "Url": "https://www.blendinteractive.com/about/team/chase-burandt/",
+    "ImageUrl": "https://www.blendinteractive.com/globalassets/images---bios/chase-bio-2022.jpg"
+  },
+  "Category": "Developer Tools",
+  "Description": "robots.txt dynmically generated using the AppSettings and can be configured per environment.",
+  "IssueTrackerUrl": "https://github.com/blendinteractive/Blend.RobotsTxt.Umbraco/issues",
+  "LicenseTypes": [ "Free" ],
+  "PackageType": "Package",
+  "Tags": [ "robots", "robots.txt", "blend", "blend", "blend" ],
+  "Title": "Blend RobotsTxt",
+  "Screenshots": [
+    {
+      "ImageUrl": "https://raw.githubusercontent.com/blendinteractive/Blend.RobotsTxt.Umbraco/main/Blend.RobotsTxt/Images/appsettings.jpg",
+      "Caption": "Apply robot settings in appsettings.json or appsettings.*.json files"
+    },
+    {
+      "ImageUrl": "https://raw.githubusercontent.com/blendinteractive/Blend.RobotsTxt.Umbraco/main/Blend.RobotsTxt/Images/robotstxt-onwebsite.jpg",
+      "Captions": "Example of viewing the robots.txt on the website."
+    },
+    {
+      "ImageUrl": "https://raw.githubusercontent.com/blendinteractive/Blend.RobotsTxt.Umbraco/main/Blend.RobotsTxt/Images/robotstxt-view-source.jpg",
+      "Caption": "Viewing the source of the robots.txt file on the website."
+    }
+  ]
+}
