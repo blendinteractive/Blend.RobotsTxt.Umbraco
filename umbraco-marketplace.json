@@ -10,7 +10,7 @@
   "IssueTrackerUrl": "https://github.com/blendinteractive/Blend.RobotsTxt.Umbraco/issues",
   "LicenseTypes": [ "Free" ],
   "PackageType": "Package",
-  "Tags": [ "robots", "robots.txt", "blend", "blend", "blend" ],
+  "Tags": [ "robots", "robots.txt", "blend", "blend", "blend-interactive" ],
   "Title": "Blend RobotsTxt",
   "Screenshots": [
     {
@@ -19,7 +19,7 @@
     },
     {
       "ImageUrl": "https://raw.githubusercontent.com/blendinteractive/Blend.RobotsTxt.Umbraco/main/Blend.RobotsTxt/Images/robotstxt-onwebsite.jpg",
-      "Captions": "Example of viewing the robots.txt on the website."
+      "Caption": "Example of viewing the robots.txt on the website."
     },
     {
       "ImageUrl": "https://raw.githubusercontent.com/blendinteractive/Blend.RobotsTxt.Umbraco/main/Blend.RobotsTxt/Images/robotstxt-view-source.jpg",
