@@ -1,0 +1,15 @@
+{
+  "$schema": "https://marketplace.umbraco.com/umbraco-marketplace-schema.json",
+  "AuthorDetails": {
+    "Name": "Chase Burandt",
+    "Url": "https://www.blendinteractive.com/about/team/chase-burandt/",
+    "ImageUrl": "https://www.blendinteractive.com/globalassets/images---bios/chase-bio-2022.jpg"
+  },
+  "Category": "Developer Tools",
+  "Description": "robots.txt dynmically generated using the AppSettings and can be configured per environment.",
+  "IssueTrackerUrl": "https://github.com/blendinteractive/Blend.RobotsTxt.Umbraco/issues",
+  "LicenseTypes": [ "Free" ],
+  "PackageType": "Package",
+  "Tags": [ "robots", "robots.txt", "blend", "blend", "blend" ],
+  "Title": "Blend RobotsTxt"
+}
