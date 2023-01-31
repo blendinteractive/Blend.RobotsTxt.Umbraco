@@ -19,6 +19,7 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/blendinteractive/Blend.RobotsTxt.Umbraco</RepositoryUrl>
+    <PackageIcon>blend-robotstxt-icon.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -31,6 +32,10 @@
     <None Include="build\**\*.*">
       <Pack>True</Pack>
       <PackagePath>buildTransitive</PackagePath>
+    </None>
+    <None Include="..\blend-robotstxt-icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
     </None>
   </ItemGroup>
 </Project>
