@@ -15,7 +15,7 @@
 
   <PropertyGroup>
     <PackageId>Our.Umbraco.Blend.RobotsTxt</PackageId>
-    <PackageTags>umbraco plugin package robots blend umbraco-marketplace</PackageTags>
+    <PackageTags>umbraco robots blend umbraco-marketplace</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/blendinteractive/Blend.RobotsTxt.Umbraco</RepositoryUrl>

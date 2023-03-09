@@ -10,7 +10,7 @@
   "IssueTrackerUrl": "https://github.com/blendinteractive/Blend.RobotsTxt.Umbraco/issues",
   "LicenseTypes": [ "Free" ],
   "PackageType": "Package",
-  "Tags": [ "robots", "robots.txt", "blend", "blend", "blend-interactive" ],
+  "Tags": [ "robots", "robots.txt", "blend", "blend-interactive" ],
   "Title": "Blend RobotsTxt",
   "Screenshots": [
     {
