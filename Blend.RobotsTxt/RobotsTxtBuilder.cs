@@ -16,13 +16,12 @@ namespace Blend.RobotsTxt
     public class RobotsTxtBuilder : IRobotsBuilder
     {
         private readonly List<RobotsTxtOption> _config;
-        private readonly GlobalSettings _globalSettings;
         private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public RobotsTxtBuilder(IOptions<List<RobotsTxtOption>> config, IOptions<GlobalSettings> globalSettings, IWebHostEnvironment webHostEnvironment)
+        public RobotsTxtBuilder(IOptions<List<RobotsTxtOption>> config, IWebHostEnvironment webHostEnvironment)
         {
             _config = config.Value;
-            _globalSettings = globalSettings.Value;
+            
             _webHostEnvironment = webHostEnvironment;
         }
 
@@ -53,7 +52,8 @@ namespace Blend.RobotsTxt
                     {
                         foreach (var item in robot.Allow)
                         {
-                            stringBuilder.AppendLine($"Allow: {item}");
+                            if (!item.IsNullOrWhiteSpace())
+                                stringBuilder.AppendLine($"Allow: {item}");
                         }
                     }
 
@@ -62,7 +62,8 @@ namespace Blend.RobotsTxt
                     {
                         foreach (var item in robot.Disallow)
                         {
-                            stringBuilder.AppendLine($"Disallow: {item}");
+                            if (!item.IsNullOrWhiteSpace())
+                                stringBuilder.AppendLine($"Disallow: {item}");
                         }
                     }
 
@@ -82,7 +83,6 @@ namespace Blend.RobotsTxt
                     case "Production":
                         stringBuilder.AppendLine("User-agent: *");
                         stringBuilder.AppendLine("Allow: /");
-                        stringBuilder.AppendLine($"Disallow: {_globalSettings.UmbracoPath.Replace("~", "")}");
                         break;
                     default:
                         stringBuilder.AppendLine("User-agent: *");
@@ -96,7 +96,6 @@ namespace Blend.RobotsTxt
                 // Last Resort and display production robots.txt.
                 stringBuilder.AppendLine("User-agent: *");
                 stringBuilder.AppendLine("Allow: /");
-                stringBuilder.AppendLine($"Disallow: {_globalSettings.UmbracoPath.Replace("~", "")}");
             }
             var robotsTxt = stringBuilder.ToString();
             return robotsTxt;

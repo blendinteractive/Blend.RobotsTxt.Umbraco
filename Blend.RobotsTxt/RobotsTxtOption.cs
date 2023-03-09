@@ -20,21 +20,18 @@ namespace Blend.RobotsTxt
         /// <summary>
         /// Array of paths to allow
         /// </summary>
-        [DefaultValue(new string[] { })]
         [Description("Array of paths to allow")]
-        public string[] Allow { get; set; }
+        public string[] Allow { get; set; } = Array.Empty<string>();
 
         /// <summary>
         /// Array of paths to disallow
         /// </summary>
-        [DefaultValue(new string[] { "/" })]
         [Description("Array of paths to allow")]
-        public string[] Disallow { get; set; }
+        public string[] Disallow { get; set; } = Array.Empty<string>();
 
         /// <summary>
         /// Path to the sitemap.xml file
         /// </summary>
-        [DefaultValue("")]
         [Description("Path to the sitemap.xml file")]
         public string Sitemap { get; set; }
 
