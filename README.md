@@ -54,7 +54,7 @@ In the root of your `appSettings.json` you can configure custom settings. You ca
         "UserAgent": "*",
         "Allow": [ "/" ],
         "Disallow": [ "/umbraco" ],
-        "Sitemap: "/sitemap.xml"
+        "Sitemap": "/sitemap.xml"
     }
 ]
 ```
